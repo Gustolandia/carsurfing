@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.tus.carsurfing</groupId>
 	<artifactId>ride-service</artifactId>
-	<description>Team B car surfing project. Ride micro service project.</description>
+	<description>Team B car surfing project. Rideservice.</description>
 	<properties>
 		<java.version>8</java.version>
 		<spring-cloud.version>2021.0.3</spring-cloud.version>
