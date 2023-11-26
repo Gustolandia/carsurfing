@@ -8,7 +8,7 @@ Carsurfing app:
 
 To test with Docker run the following commands:
 
-- clone project from https://github.com/catalinpatularu78/carsurfing.git
+- clone project from https://github.com/catalinpatularu78/carsurfing.git (private repo) or from here.
 - cd carsurfing
 - checkout your local working branch
 - mvn clean install (this will build and package jars for two services userservice and rideservice)
