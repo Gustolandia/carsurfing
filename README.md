@@ -2,7 +2,7 @@
 
 ## Carsurfing App
 
-- Maven project with two modules, both being Spring boot apps.
+- Maven project with three modules, all being Spring boot apps.
 - Functionality can be tested using docker-compose.
 - To make changes, checkout local branch.
 - Push to master only after making sure the functionality is working after testing manually with the services deployed in Docker containers.
@@ -11,16 +11,18 @@
 
 To test with Docker, run the following commands:
 
-- Clone the project from [GitHub](https://github.com/catalinpatularu78/carsurfing.git) (private repo) or from here.
+- Clone the project from [original GitHub](https://github.com/catalinpatularu78/carsurfing.git) (private repo) or from [here](https://github.com/Gustolandia/carsurfing.git).
 - `cd carsurfing`
 - Checkout your local working branch
-- Run `mvn clean install` (this will build and package jars for two services: `userservice` and `rideservice`)
+- Run `mvn clean install` (this will build and package jars for three services: `userservice`, `reviewservice` and `rideservice`)
 - Build images for each service:
   - `docker build -t carsurfing-mysql .`
     (to build mysql custom image which includes SQL statements to create the tables and populate the users table. See details in `/sql/tables.sql`)
   - `docker build -f ride-service/Dockerfile -t rideservice .`
     (to build the rideservice image)
   - `docker build -f user-service/Dockerfile -t userservice .`
+    (to build the userservice image)
+  - `docker build -f review-service/Dockerfile -t reviewservice .`
     (to build the userservice image)
   - `cd web-app && docker build -f Dockerfile -t web-app .`
     (to build the web-app image)
